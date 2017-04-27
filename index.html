@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spid chat</title>
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" type="text/css" href="/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<script src="/socket.io/socket.io.js"></script>
+	</script>
+	<script type="text/javascript" src="/js/main.js"></script>
+</head>
+<body>
+	<div id="msgBox"><p>Заполни поле, долбоеб.</p></div>
+	<div id="countBox"><p>Сообщние не должно превышать 62 символа.</p></div>
+	<div class="content" id="chat">
+		<div class="header">
+			<h1>Welcome to Spid chat</h1>
+		</div>
+		<div class="chat">
+			<ul id="messages"></ul>
+			<input type="text" id="input" v-model="message" v-on:keyup.13="sendMessage" placeholder="Enter your message">
+		</div>
+	</div>
+</body>
+</html>
