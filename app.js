@@ -37,7 +37,7 @@ app.post('/', function(req,res){
 	console.log(req.body.text);
 });
 
-http.listen(1337, function(){
+http.listen(process.env.PORT || 1337, function(){
 	console.log('server started...');
 });
 
